@@ -14,7 +14,7 @@ const map = [
   {
     id: "1",
     name: "User1",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    image: "assets/images/map.png",
   }
 ]
 
@@ -46,6 +46,10 @@ const Index = ()=> {
 export default Index
 
 const styles = StyleSheet.create({
+
+  /*hex codes for transit app colors "#6b40b4" = search bar blue, "#f3eef8" search text white, "#18171d" = item list black,  
+  "#8b90a4" = item text gray, "#a5212f" calgary transit red, "#fffeff" transit text white, "#e54051" ticket button red,
+   "#fdfdfc" ticket button text, "#fdfefb" profile border, "#2f2e33" profile settings cog bg, "#f0f0f0" settings cog */
   container:{
     flex:1,
     paddingTop:StatusBar.currentHeight,
