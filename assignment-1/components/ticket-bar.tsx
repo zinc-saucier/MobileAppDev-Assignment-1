@@ -5,9 +5,9 @@ const BuyTicketBar =()=> {
   return (
     //ticket bar
           <View style={styles.buttonContainer}>
-            <div>
+            
             <Text style={styles.buttonContainerText}>Calgary Transit</Text>
-            </div>
+            
             <View style={styles.button}>
             {/* buy button */}
               <TouchableOpacity >
