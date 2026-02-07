@@ -11,7 +11,9 @@ export default function Index() {
     <View style={{flex:1,
                 alignItems: "center",
                 paddingTop:StatusBar.currentHeight,
-                backgroundColor:"#000"
+                backgroundColor:"#000",
+                minWidth: 400,
+                maxWidth: 600
             }}>
       
       <Map/>

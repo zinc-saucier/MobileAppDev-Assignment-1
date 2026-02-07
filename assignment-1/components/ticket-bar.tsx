@@ -1,18 +1,23 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 
+
+
 const BuyTicketBar =()=> {
   return (
     //ticket bar
           <View style={styles.buttonContainer}>
-            <div>
-            <Text style={styles.buttonContainerText}>Calgary Transit</Text>
-            </div>
-            <View style={styles.button}>
+            <View style={styles.textBox}>
+              <Text style={styles.buttonContainerText}>Calgary Transit</Text>
+            </View>
             {/* buy button */}
-              <TouchableOpacity >
-              <Text style={styles.buttonText}>Alert</Text>
-              </TouchableOpacity>
+            <View style={styles.buttonBox}>
+              <View style={styles.button}>
+                <TouchableOpacity onPress={() => alert('Alert Button Pressed!')}>
+                  
+                  <Text style={styles.buttonText}>Alert</Text>
+                </TouchableOpacity>
+              </View>
           </View>
         </View>
   );
@@ -40,20 +45,27 @@ const styles = StyleSheet.create({
     backgroundColor:"#a5212f",
     marginBottom: 20
   },
-  buttonContainerText: {
+  textBox: {
+    flex: 7,
     marginLeft: 20,
+  },
+  buttonBox: {
+    flex: 2,
+    marginRight: 10,
+  },
+  buttonContainerText: {
     color: "#fdfdfc",
     fontSize: 25,
     fontWeight: "bold",
   },
-  button:{
+  button: {  
     alignContent: "center",
     alignSelf: "flex-end",
     padding: 8,
     fontSize: 30,
     backgroundColor: "#e54051",
     borderRadius: 35,
-    width: 90,
+    width: 115,
     height: 40,
     
   },
@@ -63,5 +75,6 @@ const styles = StyleSheet.create({
     color:"#fdfdfc",
     overflow:"hidden",
     paddingBottom: 15,
+    textAlign: "center"
   }
 })
