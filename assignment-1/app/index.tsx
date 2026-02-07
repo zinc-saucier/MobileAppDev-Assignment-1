@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, StatusBar, ScrollView, FlatList } from "react-native";
+import { Text, View, StyleSheet, StatusBar, ScrollView, FlatList, Image } from "react-native";
 
 // Bones for route tiles
 const routes = [
@@ -14,7 +14,7 @@ const map = [
   {
     id: "1",
     name: "User1",
-    image: "assets/images/map.png",
+    image: "images/map.png",
   }
 ]
 
@@ -30,14 +30,11 @@ const button = [
 //main page stuff here
 const Index = ()=> {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View>
+      
+      <View>
+        <Image source={require('./images/map.png')} style={styles.mapContainer}/>
+      </View>
     </View>
   );
 }
@@ -50,10 +47,11 @@ const styles = StyleSheet.create({
   /*hex codes for transit app colors "#6b40b4" = search bar blue, "#f3eef8" search text white, "#18171d" = item list black,  
   "#8b90a4" = item text gray, "#a5212f" calgary transit red, "#fffeff" transit text white, "#e54051" ticket button red,
    "#fdfdfc" ticket button text, "#fdfefb" profile border, "#2f2e33" profile settings cog bg, "#f0f0f0" settings cog */
-  container:{
-    flex:1,
-    paddingTop:StatusBar.currentHeight,
-    backgroundColor:"#fff"
+
+  mapContainer:{
+    height:400,
+    width:500,
+  
   },
   logo:{
     width: 50,
@@ -102,17 +100,12 @@ const styles = StyleSheet.create({
     overflow:"hidden",
     paddingBottom: 15,
   },
-  mapContainer:{
-    marginBottom: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
-    paddingBottom: 10,
-  },
   profileImage:{
     width: 40,
     height: 40,
     borderRadius: 20,
     marginRight: 10,
+    borderColor:"#fdfefb"
   },
   userName:{
     fontWeight:"bold",
