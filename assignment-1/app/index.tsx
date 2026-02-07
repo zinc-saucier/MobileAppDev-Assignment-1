@@ -8,7 +8,13 @@ import Map from "@/components/map";
 
 export default function Index() {
   return (
-    <View>
+    <View style={{flex:1,
+                alignItems: "center",
+                paddingTop:StatusBar.currentHeight,
+                backgroundColor:"#000",
+                minWidth: 400,
+                maxWidth: 600
+            }}>
       
       <Map/>
       <SearchBar/>
