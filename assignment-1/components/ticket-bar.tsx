@@ -25,18 +25,12 @@ const BuyTicketBar =()=> {
 
 export default BuyTicketBar
 
-
 const styles = StyleSheet.create({
   
-  
-  icon:{
-    width: 40,
-    height: 40,
-    resizeMode:"cover",
-    marginLeft: 20,
-    marginRight: 20,
-  },
   buttonContainer: {
+    position: 'absolute',
+    bottom: 0,
+    zIndex: 1,
     paddingVertical: 9,
     flexDirection: "row",
     width: '90%',
@@ -77,4 +71,5 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
     textAlign: "center"
   }
+ 
 })
