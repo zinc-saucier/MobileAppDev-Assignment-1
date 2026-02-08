@@ -1,6 +1,7 @@
-import { FlatList, StatusBar, StyleSheet, Text, View } from "react-native";
-// Bones for route tiles
+import { Text, View, StyleSheet, StatusBar, FlatList, Image, TouchableOpacity } from "react-native";
+import button from "./ticket-bar";
 
+// Bones for route tiles
 const routes = [
   {
     id: "1",
@@ -51,7 +52,7 @@ const RouteTimes = () => {
                 <Text style={styles.routeInfo}>{item.currentLocation}</Text>
               </View>
 
-              <View style={styles.timeContainer}>
+              <View style={styles.timeContainer}>-
                 <Text style={styles.routeTime}>{item.timeToPickup}</Text>
                 <Text style={styles.routeInfo}>minutes</Text>
               </View>

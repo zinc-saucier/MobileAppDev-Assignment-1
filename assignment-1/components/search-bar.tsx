@@ -18,10 +18,13 @@ const SearchBar = () => {
       {/* insert vertical separator and location image */}
       <View style={styles.trailingIcon}>
         <Image
-          source={require("../assets/images/react-logo.png")}
+          //source={require("../assets/images/react-logo.png")}
+          source={{
+            uri: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Blender_tracking.svg",
+          }}
           style={styles.icon}
         />
-        <Text style={styles.tripTime}>test</Text>
+        <Text style={styles.tripTime}>51 min</Text>
       </View>
     </View>
   );
@@ -34,6 +37,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 40,
     height: 40,
+    marginTop: 6,
     resizeMode: "cover",
     marginLeft: 10,
     marginRight: 10,
@@ -45,22 +49,26 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     flex: 1,
     width: 40,
-    height: 40,
+    height: 50,
     resizeMode: "cover",
     marginLeft: 10,
     marginRight: 10,
+    marginTop: 5,
+    marginBottom: 5,
   },
   icon: {
     width: 40,
     height: 40,
   },
   searchContainer: {
-    paddingVertical: 9,
+    position: "absolute",
+    zIndex: 1,
+    top: 375,
     alignContent: "space-evenly",
     flexDirection: "row",
     textAlign: "center",
     width: "90%",
-    height: 60,
+    height: 65,
     padding: 5,
     backgroundColor: "#6b40b4",
     borderRadius: 15,
@@ -74,6 +82,7 @@ const styles = StyleSheet.create({
   },
   searchText: {
     flex: 7,
+    marginTop: 5,
     marginLeft: 0,
     color: "#f3eef8",
     fontSize: 25,
