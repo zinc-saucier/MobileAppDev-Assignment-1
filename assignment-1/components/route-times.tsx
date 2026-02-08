@@ -52,7 +52,8 @@ const RouteTimes = () => {
                 <Text style={styles.routeInfo}>{item.currentLocation}</Text>
               </View>
 
-              <View style={styles.timeContainer}>-
+              <View style={styles.timeContainer}>
+                <Image source={require("./images/wifi.png")} style={styles.wifi} />
                 <Text style={styles.routeTime}>{item.timeToPickup}</Text>
                 <Text style={styles.routeInfo}>minutes</Text>
               </View>
@@ -169,6 +170,13 @@ const styles = StyleSheet.create({
     paddingBottom: 2,
     paddingLeft: 1,
     borderRadius: 6,
+  },
+  wifi: {
+    width: 23,
+    height: 12,
+    position: 'fixed',
+    transform: [{rotate: '40deg'}],
+    marginLeft: 50,
   },
   searchContainer: {
     paddingVertical: 9,
