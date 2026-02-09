@@ -1,5 +1,5 @@
-import { Text, View, StyleSheet, StatusBar, FlatList, Image, TouchableOpacity } from "react-native";
-import button from "./ticket-bar";
+import { Text, View, StyleSheet, StatusBar, FlatList, Image } from "react-native";
+
 
 // Bones for route tiles
 const routes = [
@@ -53,7 +53,11 @@ const RouteTimes = () => {
               </View>
 
               <View style={styles.timeContainer}>
-                <Image source={require("./images/wifi.png")} style={styles.wifi} />
+                <Image
+                  source={require("./images/wifi.png")}
+                  //unsure why this throws an error, it seems to render fine?
+                  style={styles.wifi}
+                  />
                 <Text style={styles.routeTime}>{item.timeToPickup}</Text>
                 <Text style={styles.routeInfo}>minutes</Text>
               </View>
@@ -80,29 +84,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#000",
     width: "100%",
   },
-  logo: {
-    width: 50,
-    height: 50,
-    borderRadius: 35,
-    borderWidth: 2,
-    borderColor: "#d6249f",
-    resizeMode: "cover",
-    marginRight: 20,
-  },
-  icon: {
-    width: 40,
-    height: 40,
-    resizeMode: "cover",
-    marginLeft: 20,
-    marginRight: 20,
-  },
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 15,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
-  },
+  
   headerText: {
     fontSize: 18,
     fontWeight: "bold",
@@ -178,77 +160,9 @@ const styles = StyleSheet.create({
     transform: [{rotate: '40deg'}],
     marginLeft: 50,
   },
-  searchContainer: {
-    paddingVertical: 9,
-
-    flexDirection: "row",
-    textAlign: "center",
-    width: "90%",
-    height: 60,
-    padding: 5,
-    backgroundColor: "#6b40b4",
-    borderRadius: 15,
-    resizeMode: "cover",
-  },
-  searchText: {
-    marginLeft: 0,
-    color: "#f3eef8",
-    fontSize: 25,
-  },
-  buttonContainer: {
-    paddingVertical: 9,
-
-    flexDirection: "row",
-    width: "90%",
-    height: 60,
-    borderRadius: 15,
-    backgroundColor: "#a5212f",
-    marginBottom: 20,
-  },
-  buttonContainerText: {
-    marginLeft: 20,
-    color: "#fdfdfc",
-    fontSize: 25,
-    fontWeight: "bold",
-  },
-  button: {
-    alignSelf: "flex-end",
-    padding: 8,
-    fontSize: 30,
-    textAlign: "center",
-    backgroundColor: "#e54051",
-    borderRadius: 35,
-    width: 60,
-    height: 40,
-  },
-  buttonText: {
-    color: "#fdfdfc",
-    width: 85,
-    overflow: "hidden",
-    paddingBottom: 15,
-  },
-  mapContainer: {
-    marginBottom: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
-    paddingBottom: 10,
-  },
-  profileImage: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    marginRight: 10,
-  },
-
-  mapImage: {
-    width: "100%",
-    height: 300,
-    borderRadius: 10,
-    resizeMode: "cover",
-  },
   bold: {
     fontWeight: "bold",
     marginRight: 5,
     color: "#8b90a4",
-  },
+  }
 });
