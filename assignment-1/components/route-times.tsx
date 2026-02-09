@@ -55,7 +55,6 @@ const RouteTimes = () => {
               <View style={styles.timeContainer}>
                 <Image
                   source={require("./images/wifi.png")}
-                  //unsure why this throws an error, it seems to render fine?
                   style={styles.wifi}
                   />
                 <Text style={styles.routeTime}>{item.timeToPickup}</Text>
@@ -156,7 +155,7 @@ const styles = StyleSheet.create({
   wifi: {
     width: 23,
     height: 12,
-    position: 'fixed',
+    position: 'absolute',
     transform: [{rotate: '40deg'}],
     marginLeft: 50,
   },
